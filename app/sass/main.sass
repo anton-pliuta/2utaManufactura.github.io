@@ -8,15 +8,30 @@
 ::selection
 	background-color: $accent
 	color: #fff
+html, body
+	margin: 0
+	height: 100vh
+	overflow: hidden
+p
+	margin: 0
+
+.pretty
+	margin-right: 0!important
+
+body .pretty input:checked~.state.p-success label:after, .pretty.p-toggle .state.p-success label:after
+	background-color: $accent!important
+	opacity: .1
 
 body
 	font-size: 16px
 	min-width: 320px
-	position: relative
+	position: fixed
+	background-color: $accent
 	line-height: 1.65
 	font-family: $default-font
 	overflow: hidden
 	color: $text
+	clip-path: inset(0 0 0 0)
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -37,3 +52,209 @@ body
 
 b, strong
 	font-weight: bold
+
+section.hello
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100vh
+	.hello-text
+		position: relative
+		z-index: 111
+		color: white
+		display: flex
+		align-items: center
+		flex-direction: column
+		h1
+			font-weight: bold
+			font-size: 40px
+			letter-spacing: 0.04em
+			margin-bottom: 0
+		h5
+			font-weight: 500
+			font-size: 15px
+			letter-spacing: 0.04em
+			opacity: .88
+	.hello-shapes
+		position: absolute
+		width: 100vw
+		height: 100vh
+		img
+			position: absolute
+			&:nth-child(1)
+				bottom: -15vh
+				left: -30vw
+				animation: 3s ease-in-out image1 forwards
+			&:nth-child(2)
+				top: 25vh
+				left: 50vw
+				animation: 3s ease-in-out image2 forwards
+			&:nth-child(3)
+				top: 40vh
+				left: 17vw
+				animation: 3s ease-in-out image3 forwards
+			&:nth-child(4)
+				top: 70vh
+				left: 35vw
+				animation: 3s ease-in-out image4 forwards
+			&:nth-child(5)
+				top: -12vh
+				right: -37vw
+				animation: 3s ease-in-out image5 forwards
+			&:nth-child(6)
+				bottom: 35vh
+				left: 80vw
+				animation: 3s ease-in-out image6 forwards
+			&:nth-child(7)
+				top: 38vh
+				left: 50vw
+				animation: 3s ease-in-out image6 forwards
+			&:nth-child(8)
+				top: -10vh
+				left: -50vw
+				opacity: 0
+				animation: 1s ease-in-out 1s image8 forwards
+
+section.rating
+	width: 100vw
+	position: relative
+	z-index: 222
+	top: -100vh
+	.top
+		display: flex
+		margin-bottom: 2.5vh
+		margin-top: 2.5vh
+		.client-name
+			display: flex
+			align-items: center
+			width: 100%
+			justify-content: center
+			.img-wrapper
+				clip-path: circle(50% at 50% 50%)
+				height: 7vh
+				width: 7vh
+				background-image: url(../img/_src/2.png)
+				background-size: cover
+				margin-right: 5vw
+		.lang-btn
+			background: #FFFFFF
+			border-radius: 18px
+			position: absolute
+			right: -40vw
+			ul
+				display: flex
+				list-style-type: none
+				justify-content: center
+				align-items: center
+				padding: 0 15vw 0 2vw
+				margin: 0
+				li
+					padding: 1.5vh 3.5vw
+	.main-rating-panel
+		background: #FFFFFF
+		border-radius: 34px 34px 0 0
+		height: 90vh
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: center
+		form
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+			top: -13vh
+			width: 79vw
+			.privacy-checkbox
+				margin-top: 2vh
+				display: flex
+				width: 290px
+				align-items: center
+				p
+					font-family: Montserrat
+					font-style: normal
+					font-weight: 500
+					font-size: 11px
+					line-height: 132%
+					letter-spacing: 0.04em
+					color: #0080DD
+					opacity: 0.7
+					margin-left: 2vw
+			.comment-input, button
+				width: 290px
+			.comment-input
+				height: 42px
+				margin-top: 4vh
+				margin-bottom: 3vh
+				border: none
+				background: rgba(24, 158, 255, 0.1)
+				border-radius: 14px
+				&::placeholder
+					color: #10164F
+					font-style: normal
+					font-weight: 500
+					font-size: 13px
+					letter-spacing: 0.04em
+					opacity: 0.3
+					padding-left: 21px
+					padding-top: 3px
+			button
+				height: 47px
+				background: #189EFF
+				box-shadow: 0px 0px 50px rgba(24, 158, 255, 0.25), 0px 0px 25px rgba(24, 158, 255, 0.25)
+				border-radius: 15px
+				border: none
+			.rating
+				width: 100%
+				max-width: 290px
+				display: flex
+				justify-content: center
+				span
+					background-image: url(../img/_src/star.svg)
+					background-repeat: no-repeat
+					background-size: cover
+					opacity: .3
+					width: 30px
+					height: 30px
+					margin: 0 1.7vw
+				.rating-star
+					opacity: 0
+
+		.character-lottie
+			height: 33vh
+			position: relative
+			top: -10vh
+		h2
+			font-family: Montserrat
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 132%
+			letter-spacing: 0.04em
+			color: #189EFF
+			text-align: center
+			margin-top: 2vh
+			position: relative
+			z-index: 555
+
+@keyframes image8
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+// @keyframes image1
+// 	0%
+// 		left: -50vw
+// 		bottom: -25vh
+// 	100%
+// 		left: -30vw
+// 		bottom: -15vh
+
+// @keyframes image2
+// 	0%
+// 		top: 15vh
+// 		left: 20vw
+// 	100%
+// 		top: 25vh
+// 		left: 50vw
