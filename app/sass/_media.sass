@@ -1,31 +1,39 @@
 @import "vars"
 
-
 /*==========  Desktop First  ==========*/
+@media only screen and (min-height: 780px)
+    section.rating .main-rating-panel .panel-content .animationWrapper
+        top: 38.5vh
+@media only screen and (max-width: 320px)
+    section.rating .main-rating-panel .panel-content h2.leave-phone-title
+        width: 93%
+        font-size: 18px
+    section.rating .main-rating-panel .panel-content .rate-state-text
+        font-size: 21px
+        margin-top: 1vh
+    section.rating .main-rating-panel .panel-content .character-lottie
+        height: 30vh
+    section.rating .main-rating-panel .panel-content form
+        top: -15vh
+    section.rating .top .lang-btn
+        top: -5px
+    section.rating .main-rating-panel .panel-content form .leave-phone:nth-child(2)
+        margin-bottom: 3vh
+    section.rating .main-rating-panel .panel-content.add-google-maps-feedback a
+        margin-bottom: 7vh
+    section.rating .main-rating-panel .panel-content #success
+        top: -6vh
+        height: 31vh
+    section.rating .main-rating-panel .panel-content.add-google-maps-feedback h5
+        z-index: 999
+        top: -2vh
+    section.rating .main-rating-panel .panel-content.add-google-maps-feedback p.email-deal-text
+        margin-bottom: 0vh
+        position: relative
+        top: -6vh
+    section.rating .main-rating-panel .panel-content.add-google-maps-feedback h2
+        margin-top: 0
+    section.rating .main-rating-panel .panel-content.add-google-maps-feedback a
+        position: relative
+        top: -3vh
 
-// ≥1200px
-+media-breakpoint-down(lg)
-
-// ≥992px
-+media-breakpoint-down(md)
-
-// ≥768px
-+media-breakpoint-down(sm)
-
-// ≥576px
-+media-breakpoint-down(xs)
-
-
-/*==========  Mobile First  ==========*/
-
-// ≤576px
-+media-breakpoint-up(sm)
-
-// ≤768px
-+media-breakpoint-up(md)
-
-// ≤992px
-+media-breakpoint-up(lg)
-
-// ≤1200px
-+media-breakpoint-up(xl)
