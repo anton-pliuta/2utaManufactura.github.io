@@ -75,6 +75,7 @@
 				<div class="character-lottie" id="comment"></div>
 
 				<form id="feedbackForm" method="POST" action="#next-screen">
+					<p id="rateUs" class="error-text-stars">Оцените заведение</p>
 					<div class="rating">
 						<span id="star1"><input class="rating-star" type="radio" name="rating" value="1"></span>
 						<span id="star2"><input class="rating-star" type="radio" name="rating" value="2"></span>
@@ -97,7 +98,7 @@
 								<label></label>
 							</div>
 						</div>
-						<p>Я соглашаюсь с правилами и условиями использования</p>
+						<p id="privacyText">Я соглашаюсь с правилами и условиями использования</p>
 					</div>
 				</form>
 			</div>
@@ -107,12 +108,13 @@
 					<h2 class="panel-text leave-phone-title">Укражите номер телефона для обратной связи</h2>
 					<div class="character-lottie" id="phone"></div>
 
+					<p id="leavePhone" class="error-text-phone">оцените заведение</p>
 					<form method="POST" id="getPhoneForm" action="#">
 						<select class="comment-input leave-phone" id="leavePhoneInput" type="text" name="phoneCode">
 							<option value="+38">Украина (+38)</option>
 						</select>
 						<input class="comment-input leave-phone" id="leavePhoneInputTwo" type="text" name="phone"
-							placeholder="Введите номер телефона">
+							placeholder="0992344578">
 						<button id="panelTwoBtn" type="button">Отправить</button>
 					</form>
 				</div>

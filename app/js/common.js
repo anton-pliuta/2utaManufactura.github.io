@@ -114,247 +114,257 @@ $(function () {
 
 
     $('#star1').click(function () {
-        if ($('#checkbox').is(":checked")) {
-            // if (!isStarOneClicked) {
-            $('#star1').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star2').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star3').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star4').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star5').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star1').css("background-image", "url(../img/_src/1star.svg");
-            $('#star2').css("background-image", "url(../img/_src/star.svg");
-            $('#star3').css("background-image", "url(../img/_src/star.svg");
-            $('#star4').css("background-image", "url(../img/_src/star.svg");
-            $('#star5').css("background-image", "url(../img/_src/star.svg");
-
-            /////////
-            // Display characters
-
-            $('#helloCharacter').css({ 'display': 'none' });
-            $('#oneStarCharacter').css({ 'display': 'flex' });
-            $('#twoStarCharacter').css({ 'display': 'none' });
-            $('#threeStarCharacter').css({ 'display': 'none' });
-            $('#fourStarCharacter').css({ 'display': 'none' });
-            $('#fiveStarCharacter').css({ 'display': 'none' });
-            $('#comment').css({ 'display': 'none' });
-
-            oneStar.setSpeed(5);
-            oneStar.play();
-
-            threeStar.stop();
-            fiveStar.stop();
-            comment.stop();
-
-            starsRating = 1;
+        if (!$('#checkbox').is(":checked")) {
+            $('#unchecked').css({ 'display': 'none' });
         }
+        // if (!isStarOneClicked) {
+        $('#star1').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star2').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star3').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star4').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star5').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star1').css("background-image", "url(../img/_src/1star.svg");
+        $('#star2').css("background-image", "url(../img/_src/star.svg");
+        $('#star3').css("background-image", "url(../img/_src/star.svg");
+        $('#star4').css("background-image", "url(../img/_src/star.svg");
+        $('#star5').css("background-image", "url(../img/_src/star.svg");
+
+        /////////
+        // Display characters
+
+        $('#helloCharacter').css({ 'display': 'none' });
+        $('#oneStarCharacter').css({ 'display': 'flex' });
+        $('#twoStarCharacter').css({ 'display': 'none' });
+        $('#threeStarCharacter').css({ 'display': 'none' });
+        $('#fourStarCharacter').css({ 'display': 'none' });
+        $('#fiveStarCharacter').css({ 'display': 'none' });
+        $('#comment').css({ 'display': 'none' });
+
+        oneStar.setSpeed(5);
+        oneStar.play();
+
+        threeStar.stop();
+        fiveStar.stop();
+        comment.stop();
+
+        starsRating = 1;
+        // }
     });
 
     //////////
     // 2 STAR
 
     $('#star2').click(function () {
-        if ($('#checkbox').is(":checked")) {
-            $('#star1').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star2').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star3').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star4').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star5').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star1').css("background-image", "url(../img/_src/2star.svg");
-            $('#star2').css("background-image", "url(../img/_src/2star.svg");
-
-            $('#helloCharacter').css({ 'display': 'none' });
-            $('#oneStarCharacter').css({ 'display': 'none' });
-            $('#twoStarCharacter').css({ 'display': 'flex' });
-            $('#threeStarCharacter').css({ 'display': 'none' });
-            $('#fourStarCharacter').css({ 'display': 'none' });
-            $('#fiveStarCharacter').css({ 'display': 'none' });
-            $('#comment').css({ 'display': 'none' });
-
-            oneStar.stop();
-            threeStar.stop();
-            fiveStar.stop();
-            comment.stop();
-
-            starsRating = 2;
+        if (!$('#checkbox').is(":checked")) {
+            $('#unchecked').css({ 'display': 'none' });
         }
+        $('#star1').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star2').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star3').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star4').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star5').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star1').css("background-image", "url(../img/_src/2star.svg");
+        $('#star2').css("background-image", "url(../img/_src/2star.svg");
+
+        $('#helloCharacter').css({ 'display': 'none' });
+        $('#oneStarCharacter').css({ 'display': 'none' });
+        $('#twoStarCharacter').css({ 'display': 'flex' });
+        $('#threeStarCharacter').css({ 'display': 'none' });
+        $('#fourStarCharacter').css({ 'display': 'none' });
+        $('#fiveStarCharacter').css({ 'display': 'none' });
+        $('#comment').css({ 'display': 'none' });
+
+        oneStar.stop();
+        threeStar.stop();
+        fiveStar.stop();
+        comment.stop();
+
+        starsRating = 2;
+        // }
     });
 
     $('#star3').click(function () {
-        if ($('#checkbox').is(":checked")) {
-            $('#star1').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star2').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star3').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star4').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star5').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star1').css("background-image", "url(../img/_src/star.svg");
-            $('#star2').css("background-image", "url(../img/_src/star.svg");
-            $('#star3').css("background-image", "url(../img/_src/star.svg");
-            $('#star4').css("background-image", "url(../img/_src/star.svg");
-            $('#star5').css("background-image", "url(../img/_src/star.svg");
-
-            /////////
-            // Display characters
-
-            $('#helloCharacter').css({ 'display': 'none' });
-            $('#oneStarCharacter').css({ 'display': 'none' });
-            $('#twoStarCharacter').css({ 'display': 'none' });
-            $('#threeStarCharacter').css({ 'display': 'flex' });
-            $('#fourStarCharacter').css({ 'display': 'none' });
-            $('#fiveStarCharacter').css({ 'display': 'none' });
-            $('#comment').css({ 'display': 'none' });
-
-            threeStar.setSpeed(5);
-            threeStar.play();
-
-            oneStar.stop();
-            fiveStar.stop();
-            comment.stop();
-
-            starsRating = 3;
+        if (!$('#checkbox').is(":checked")) {
+            $('#unchecked').css({ 'display': 'none' });
         }
+        $('#star1').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star2').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star3').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star4').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star5').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star1').css("background-image", "url(../img/_src/star.svg");
+        $('#star2').css("background-image", "url(../img/_src/star.svg");
+        $('#star3').css("background-image", "url(../img/_src/star.svg");
+        $('#star4').css("background-image", "url(../img/_src/star.svg");
+        $('#star5').css("background-image", "url(../img/_src/star.svg");
+
+        /////////
+        // Display characters
+
+        $('#helloCharacter').css({ 'display': 'none' });
+        $('#oneStarCharacter').css({ 'display': 'none' });
+        $('#twoStarCharacter').css({ 'display': 'none' });
+        $('#threeStarCharacter').css({ 'display': 'flex' });
+        $('#fourStarCharacter').css({ 'display': 'none' });
+        $('#fiveStarCharacter').css({ 'display': 'none' });
+        $('#comment').css({ 'display': 'none' });
+
+        threeStar.setSpeed(5);
+        threeStar.play();
+
+        oneStar.stop();
+        fiveStar.stop();
+        comment.stop();
+
+        starsRating = 3;
+        // }
     });
 
     $('#star4').click(function () {
-        if ($('#checkbox').is(":checked")) {
-            $('#star1').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star2').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star3').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star4').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star5').animate({
-                'opacity': '.3',
-            }, 200);
-
-            $('#star1').css("background-image", "url(../img/_src/star.svg");
-            $('#star2').css("background-image", "url(../img/_src/star.svg");
-            $('#star3').css("background-image", "url(../img/_src/star.svg");
-            $('#star4').css("background-image", "url(../img/_src/star.svg");
-            $('#star5').css("background-image", "url(../img/_src/star.svg");
-
-            /////////
-            // Display characters
-
-            $('#helloCharacter').css({ 'display': 'none' });
-            $('#oneStarCharacter').css({ 'display': 'none' });
-            $('#twoStarCharacter').css({ 'display': 'none' });
-            $('#threeStarCharacter').css({ 'display': 'none' });
-            $('#fourStarCharacter').css({ 'display': 'flex' });
-            $('#fiveStarCharacter').css({ 'display': 'none' });
-            $('#comment').css({ 'display': 'none' });
-
-            oneStar.stop();
-            threeStar.stop();
-            fiveStar.stop();
-            comment.stop();
-
-            starsRating = 4;
+        if (!$('#checkbox').is(":checked")) {
+            $('#unchecked').css({ 'display': 'none' });
         }
+        $('#star1').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star2').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star3').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star4').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star5').animate({
+            'opacity': '.3',
+        }, 200);
+
+        $('#star1').css("background-image", "url(../img/_src/star.svg");
+        $('#star2').css("background-image", "url(../img/_src/star.svg");
+        $('#star3').css("background-image", "url(../img/_src/star.svg");
+        $('#star4').css("background-image", "url(../img/_src/star.svg");
+        $('#star5').css("background-image", "url(../img/_src/star.svg");
+
+        /////////
+        // Display characters
+
+        $('#helloCharacter').css({ 'display': 'none' });
+        $('#oneStarCharacter').css({ 'display': 'none' });
+        $('#twoStarCharacter').css({ 'display': 'none' });
+        $('#threeStarCharacter').css({ 'display': 'none' });
+        $('#fourStarCharacter').css({ 'display': 'flex' });
+        $('#fiveStarCharacter').css({ 'display': 'none' });
+        $('#comment').css({ 'display': 'none' });
+
+        oneStar.stop();
+        threeStar.stop();
+        fiveStar.stop();
+        comment.stop();
+
+        starsRating = 4;
+        // }
     });
 
     $('#star5').click(function () {
-        if ($('#checkbox').is(":checked")) {
-            $('#star1').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star2').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star3').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star4').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star5').animate({
-                'opacity': '1',
-            }, 200);
-
-            $('#star1').css("background-image", "url(../img/_src/5star.svg");
-            $('#star2').css("background-image", "url(../img/_src/5star.svg");
-            $('#star3').css("background-image", "url(../img/_src/5star.svg");
-            $('#star4').css("background-image", "url(../img/_src/5star.svg");
-            $('#star5').css("background-image", "url(../img/_src/5star.svg");
-
-            /////////
-            // Display characters
-
-            $('#helloCharacter').css({ 'display': 'none' });
-            $('#oneStarCharacter').css({ 'display': 'none' });
-            $('#twoStarCharacter').css({ 'display': 'none' });
-            $('#threeStarCharacter').css({ 'display': 'none' });
-            $('#fourStarCharacter').css({ 'display': 'none' });
-            $('#fiveStarCharacter').css({ 'display': 'flex' });
-            $('#comment').css({ 'display': 'none' });
-
-            fiveStar.setSpeed(5);
-            fiveStar.play();
-
-            oneStar.stop();
-            threeStar.stop();
-            comment.stop();
-
-            starsRating = 5;
+        if (!$('#checkbox').is(":checked")) {
+            $('#unchecked').css({ 'display': 'none' });
         }
+        $('#star1').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star2').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star3').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star4').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star5').animate({
+            'opacity': '1',
+        }, 200);
+
+        $('#star1').css("background-image", "url(../img/_src/5star.svg");
+        $('#star2').css("background-image", "url(../img/_src/5star.svg");
+        $('#star3').css("background-image", "url(../img/_src/5star.svg");
+        $('#star4').css("background-image", "url(../img/_src/5star.svg");
+        $('#star5').css("background-image", "url(../img/_src/5star.svg");
+
+        /////////
+        // Display characters
+
+        $('#helloCharacter').css({ 'display': 'none' });
+        $('#oneStarCharacter').css({ 'display': 'none' });
+        $('#twoStarCharacter').css({ 'display': 'none' });
+        $('#threeStarCharacter').css({ 'display': 'none' });
+        $('#fourStarCharacter').css({ 'display': 'none' });
+        $('#fiveStarCharacter').css({ 'display': 'flex' });
+        $('#comment').css({ 'display': 'none' });
+
+        fiveStar.setSpeed(5);
+        fiveStar.play();
+
+        oneStar.stop();
+        threeStar.stop();
+        comment.stop();
+
+        starsRating = 5;
+        // }
 
     });
 
@@ -521,59 +531,28 @@ $(function () {
     });
 
     /////////////////////////////
-    /// Changing panels content
+    /// Change panels content
     $('#panelContentTwo').css('display', 'none');
     $('#panelContentTwo').css('opacity', 0);
-    $('#panelContentThree').css('opacity', 0);
     $('#panelContentThree').css('display', 'none');
+    $('#panelContentThree').css('opacity', 0);
 
+    ////////////////////////////////////////////////////////////
+    // Сбор, проверка и отправка данных с формы
 
     $('#panelOneBtn').click(function () {
         // получаем данные с формы в виде обьекта
         var feedbackFormData = $('#feedbackForm').serializeArray();
 
-
-        // УКАЗАТЬ УРЛУ СЮДА
+        // УКАЗАТЬ УРЛУ для отправки полученных данных СЮДА
         var urlForFeedbackData = '/';
 
-        // проверяю на длинну обьекта
-        if (Object.keys(feedbackFormData).length == 3) {
-            console.log('yes');
-            // валидация указан ли рейтинг
-            if (feedbackFormData[0].name == 'rating' && feedbackFormData[0].value != '') {
-                console.log('yes rating');
-                // коммент
-                if (feedbackFormData[1].name == 'comment' && feedbackFormData[1].value != '') {
-                    console.log('yes comment');
-                    // не снят ли чекбокс
-                    if (feedbackFormData[2].name == 'checkbox' && feedbackFormData[1].value != '') {
-                        console.log('yes checkbox');
-
-                        $.post(urlForFeedbackData, feedbackFormData, function (returnedData) {
-                        });
-
-                        // Переход на следующий єкран
-                        $('#panelContentOne').animate({
-                            'opacity': 0
-                        }, 300);
-
-                        setTimeout(function () {
-                            $('#panelContentOne').remove();
-
-                            $('#panelContentTwo').css({
-                                'display': 'flex'
-                            });
-
-                            $('#panelContentTwo').animate({
-                                'opacity': 1
-                            }, 300);
-                        }, 300);
-                    }
-                }
-            }
-        } else {
-            alert('Заполните все поля!')
+        if (dataIsValid(feedbackFormData)) {
+            sendRatingData(feedbackFormData, urlForFeedbackData);
+            redirectToScreenTwo();
+            // redirectToScreenThree(success);
         }
+
     });
 
 
@@ -583,7 +562,6 @@ $(function () {
         // УКАЗАТЬ УРЛУ СЮДА
         var urlForUserContactData = '/';
 
-        console.log(userContactData);
 
         if (userContactData[1].value != '' && userContactData[1].value.length == 10) {
             $.post(urlForUserContactData, userContactData, function (returnedData) {
@@ -611,10 +589,98 @@ $(function () {
                 }, 500);
             }, 300);
         } else {
-            alert('Введите свой номер');
+            $('#leavePhone').text("веедите корректный номер.").css('opacity', '1');
         }
 
     });
 
 
 });
+
+function dataIsValid(feedbackFormData) {
+
+    if (feedbackFormData[0].name == 'rating' && feedbackFormData[0].value != '') {
+        if (feedbackFormData[1].name == 'comment' && parseInt(feedbackFormData[0].value) > 3) {
+            if (Object.keys(feedbackFormData).length == 3) {
+                if (feedbackFormData[2].name == 'checkbox') {
+                    return true;
+                } else {
+                    console.log('согласитесь с условиями использования!');
+                    $('#rateUs').text("согласитесь с условиями использования.").css('opacity', '1');
+                    return false;
+                }
+            } else {
+                $('#rateUs').text("согласитесь с условиями использования.").css('opacity', '1');
+            }
+        } else {
+            if(feedbackFormData[1].value != '') {
+                if (Object.keys(feedbackFormData).length == 3) {
+                    if (feedbackFormData[2].name == 'checkbox') {
+                        return true;
+                    } else {
+                        console.log('согласитесь с условиями использования!');
+                        $('#rateUs').text("согласитесь с условиями использования.").css('opacity', '1');
+                        return false;
+                    }
+                } else {
+                    $('#rateUs').text("согласитесь с условиями использования.").css('opacity', '1');
+                }
+            } else {
+                $('#rateUs').text("введите комментарий.").css('opacity', '1');
+            }
+            
+            return false;
+        }
+    } else {
+        $('#rateUs').text("оцените заведение.").css('opacity', '1');
+        return false;
+    }
+}
+
+function sendRatingData(feedbackFormData, urlForFeedbackData) {
+    $.post(urlForFeedbackData, feedbackFormData, function (returnedData) {
+    });
+}
+
+function redirectToScreenTwo() {
+    $('#panelContentOne').animate({
+        'opacity': 0
+    }, 300);
+
+    setTimeout(function () {
+        $('#panelContentOne').remove();
+
+        $('#panelContentTwo').css({
+            'display': 'flex'
+        });
+
+        $('#panelContentTwo').animate({
+            'opacity': 1
+        }, 300);
+    }, 300);
+}
+
+function redirectToScreenThree(animation) {
+    $('#panelContentTwo > *').animate({
+        'opacity': 0
+    }, 300);
+
+    setTimeout(function () {
+        $('#panelContentTwo').remove();
+        $('#panelContentOne').remove();
+
+        $('#panelContentThree').css({
+            'display': 'flex'
+        });
+
+        $('#panelContentThree').animate({
+            'opacity': 1
+        }, 300);
+
+        setTimeout(function () {
+            animation.play();
+            setTimeout(function () { animation.goToAndStop(1000); }, 1000);
+            setTimeout(function () { animation.play(); }, 1400);
+        }, 500);
+    }, 300);
+}
