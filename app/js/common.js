@@ -112,7 +112,7 @@ $(function () {
     /////////////////////////////////////
     //// STARS ANIMATION /////
 
-
+    var ratingStarsAmount = 0;
     $('#star1').click(function () {
         if (!$('#checkbox').is(":checked")) {
             $('#unchecked').css({ 'display': 'none' });
@@ -163,7 +163,6 @@ $(function () {
         comment.stop();
 
         starsRating = 1;
-        // }
     });
 
     //////////
@@ -521,14 +520,16 @@ $(function () {
     // Share to maps
 
     $('#shareToMaps').click(function () {
-        // alert('dfgdf');
-        // window.location.href = "http://stackoverflow.com";
+        console.log('email desc');
         $('#emailShareDesc').css('display', 'flex');
 
         $('#emailShareDesc').animate({
             'opacity': '1'
         }, 300);
     });
+
+    // Сюда вписать ссылку на гугл мапс
+    redirectToAfterClickOnElement('#', '#goToGmapsBtn');
 
     /////////////////////////////
     /// Change panels content
@@ -544,13 +545,20 @@ $(function () {
         // получаем данные с формы в виде обьекта
         var feedbackFormData = $('#feedbackForm').serializeArray();
 
-        // УКАЗАТЬ УРЛУ для отправки полученных данных СЮДА
+        // УКАЗАТЬ URL для отправки полученных данных сюда
         var urlForFeedbackData = '/';
+
+        // бывает баг, что оценку поставил, но в форме поле пустое, это должно его пофиксить
+        if (Object.keys(feedbackFormData).length == 2 && feedbackFormData[0].name != 'rating' && starsRating > 0) {
+            feedbackFormData[2] = feedbackFormData[1];
+            feedbackFormData[1] = feedbackFormData[0];
+            feedbackFormData[0] = { name: 'rating', value: starsRating };
+        }
 
         if (dataIsValid(feedbackFormData)) {
             sendRatingData(feedbackFormData, urlForFeedbackData);
+
             redirectToScreenTwo();
-            // redirectToScreenThree(success);
         }
 
     });
@@ -559,12 +567,15 @@ $(function () {
     $('#panelTwoBtn').click(function () {
         var userContactData = $('#getPhoneForm').serializeArray();
 
-        // УКАЗАТЬ УРЛУ СЮДА
+
+        // УКАЗАТЬ URL для отпрвки телефона сюда
         var urlForUserContactData = '/';
 
-
         if (userContactData[1].value != '' && userContactData[1].value.length == 10) {
+            var gmapsData = '';
+            
             $.post(urlForUserContactData, userContactData, function (returnedData) {
+                gmapsData = returnedData;
             });
 
             $('#panelContentTwo > *').animate({
@@ -591,14 +602,12 @@ $(function () {
         } else {
             $('#leavePhone').text("веедите корректный номер.").css('opacity', '1');
         }
-
     });
 
 
 });
 
 function dataIsValid(feedbackFormData) {
-
     if (feedbackFormData[0].name == 'rating' && feedbackFormData[0].value != '') {
         if (feedbackFormData[1].name == 'comment' && parseInt(feedbackFormData[0].value) > 3) {
             if (Object.keys(feedbackFormData).length == 3) {
@@ -613,7 +622,7 @@ function dataIsValid(feedbackFormData) {
                 $('#rateUs').text("согласитесь с условиями использования.").css('opacity', '1');
             }
         } else {
-            if(feedbackFormData[1].value != '') {
+            if (feedbackFormData[1].value != '') {
                 if (Object.keys(feedbackFormData).length == 3) {
                     if (feedbackFormData[2].name == 'checkbox') {
                         return true;
@@ -628,7 +637,7 @@ function dataIsValid(feedbackFormData) {
             } else {
                 $('#rateUs').text("введите комментарий.").css('opacity', '1');
             }
-            
+
             return false;
         }
     } else {
@@ -683,4 +692,10 @@ function redirectToScreenThree(animation) {
             setTimeout(function () { animation.play(); }, 1400);
         }, 500);
     }, 300);
+}
+
+function redirectToAfterClickOnElement(link, btnId) {
+    $(btnId).click(function () {
+        window.location.href = link;
+    });
 }
