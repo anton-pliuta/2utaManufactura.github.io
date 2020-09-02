@@ -520,7 +520,6 @@ $(function () {
     // Share to maps
 
     $('#shareToMaps').click(function () {
-        console.log('email desc');
         $('#emailShareDesc').css('display', 'flex');
 
         $('#emailShareDesc').animate({
@@ -573,7 +572,7 @@ $(function () {
 
         if (userContactData[1].value != '' && userContactData[1].value.length == 10) {
             var gmapsData = '';
-            
+
             $.post(urlForUserContactData, userContactData, function (returnedData) {
                 gmapsData = returnedData;
             });
